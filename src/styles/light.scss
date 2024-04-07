@@ -80,6 +80,7 @@ $app-light-theme: mat.define-light-theme((
     primary: $app-light-primary,
     accent: $app-light-accent,
     warn: $app-light-warn,
+    bg-1: mat.get-color-from-palette(mat.$gray-palette, 50)
   ),
   typography: $app-typography
 ));

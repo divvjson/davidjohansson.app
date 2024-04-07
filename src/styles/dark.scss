@@ -80,6 +80,7 @@ $app-dark-theme: mat.define-dark-theme((
     primary: $app-dark-primary,
     accent: $app-dark-accent,
     warn: $app-dark-warn,
+    bg-1: mat.get-color-from-palette(mat.$gray-palette, 900)
   ),
   typography: $app-typography
 ));
