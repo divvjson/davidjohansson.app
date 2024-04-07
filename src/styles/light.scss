@@ -1,0 +1,87 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+// $gray-darker: (
+//   50: #505050,
+//   100: #505050,
+//   200: #505050,
+//   300: #505050,
+//   400: #505050,
+//   500: #505050,
+//   600: #505050,
+//   700: #505050,
+//   800: #505050,
+//   900: #505050,
+//   A100: #505050,
+//   A200: #505050,
+//   A400: #505050,
+//   A700: #505050,
+//   contrast: (
+//     50: #ffffff,
+//     100: #ffffff,
+//     200: #ffffff,
+//     300: #ffffff,
+//     400: #ffffff,
+//     500: #ffffff,
+//     600: #ffffff,
+//     700: #ffffff,
+//     800: #ffffff,
+//     900: #ffffff,
+//     A100: #ffffff,
+//     A200: #ffffff,
+//     A400: #ffffff,
+//     A700: #ffffff,
+//   )
+// );
+
+// $gray-lighter: (
+//   50: whitesmoke,
+//   100: whitesmoke,
+//   200: whitesmoke,
+//   300: whitesmoke,
+//   400: whitesmoke,
+//   500: whitesmoke,
+//   600: whitesmoke,
+//   700: whitesmoke,
+//   800: whitesmoke,
+//   900: whitesmoke,
+//   A100: whitesmoke,
+//   A200: whitesmoke,
+//   A400: whitesmoke,
+//   A700: whitesmoke,
+//   contrast: (
+//     50: #000000,
+//     100: #000000,
+//     200: #000000,
+//     300: #000000,
+//     400: #000000,
+//     500: #000000,
+//     600: #000000,
+//     700: #000000,
+//     800: #000000,
+//     900: #000000,
+//     A100: #000000,
+//     A200: #000000,
+//     A400: #000000,
+//     A700: #000000,
+//   )
+// );
+
+$app-typography: mat.define-typography-config(
+  $font-family: 'Poppins, sans-serif'
+);
+
+$app-light-primary: mat.define-palette(mat.$deep-purple-palette);
+$app-light-accent: mat.define-palette(mat.$amber-palette);
+$app-light-warn: mat.define-palette(mat.$red-palette);
+$app-light-theme: mat.define-light-theme((
+  color: (
+    primary: $app-light-primary,
+    accent: $app-light-accent,
+    warn: $app-light-warn,
+  ),
+  typography: $app-typography
+));
+
+@include mat.all-component-themes($app-light-theme);

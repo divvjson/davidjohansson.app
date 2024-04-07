@@ -52,7 +52,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/theme.scss",
+              "src/styles/dark.scss",
+              "src/styles/light.scss",
               "src/styles/styles.scss"
             ],
             "scripts": []
