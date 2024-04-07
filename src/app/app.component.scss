@@ -53,6 +53,7 @@
   height: 96px;
   display: grid;
   grid-template-columns: calc(128px + 4px + 4px + 16px) 1fr;
+  margin-bottom: 16px;
 }
 
 .name-container {
