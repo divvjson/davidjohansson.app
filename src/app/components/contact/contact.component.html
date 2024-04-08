@@ -1,8 +1,20 @@
-<div class="child">
+@for (item of items; track item.label) {
+<div class="item">
+  <div>
+    {{ item.label }}
+  </div>
+  <div>
+    {{ item.value }}
+  </div>
+</div>
+}
+
+
+<!-- <div class="child">
   <div class="item">
     <div class="item-label">
       <div class="item-label-icon">
-        ICON
+        <fa-icon [icon]="faLocation" size="lg"></fa-icon>
       </div>
       <div class="item-label-text">
         Location
@@ -17,7 +29,7 @@
   <div class="item">
     <div class="item-label">
       <div class="item-label-icon">
-        ICON
+        <fa-icon [icon]="faGitub" size="lg"></fa-icon>
       </div>
       <div class="item-label-text">
         GitHub
@@ -27,4 +39,4 @@
       divvjson
     </div>
   </div>
-</div>
+</div> -->
