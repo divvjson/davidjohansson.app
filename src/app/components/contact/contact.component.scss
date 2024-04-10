@@ -1,5 +1,5 @@
 :host {
-  --spacing: 12vw;
+  --spacing: 10%;
   display: flex;
   flex-flow: row wrap;
   gap: 0 var(--spacing);
@@ -14,33 +14,24 @@
   flex: 0 0 calc(50% - var(--spacing) / 2);
 }
 
-// :host {
-//   box-sizing: border-box;
-//   padding-top: 16px;
-//   padding-bottom: 16px;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
+.item:nth-child(2) {
+  text-align: right;
+}
 
-// .child {
-//   width: 50%;
-//   display: flex;
-//   justify-content: center;
-// }
+@media (min-width: 600px) {
+  :host {
+    --spacing: 20%;
+  }
+}
 
-// .item-label {
-//   display: flex;
-//   align-items: center;
-//   column-gap: 4px;
-// }
+@media (min-width: 960px) {
 
-// .item-label-icon {
-//   display: flex;
-//   align-items: center;
-// }
+}
 
-// .item-label-text {
-//   display: flex;
-//   align-items: center;
-// }
+@media (min-width: 1280px) {
+
+}
+
+@media (min-width: 1920px) {
+
+}
