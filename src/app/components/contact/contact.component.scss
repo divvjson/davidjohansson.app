@@ -1,26 +1,35 @@
 :host {
-  --spacing: 10%;
+  --spacing: 16px;
   display: flex;
   flex-flow: row wrap;
-  gap: 0 var(--spacing);
+  row-gap: 16px;
   justify-content: space-between;
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: var(--spacing);
   padding-right: var(--spacing);
+  font-size: 12px;
 }
 
 .item {
   flex: 0 0 calc(50% - var(--spacing) / 2);
+  display: flex;
+  flex-direction: column;
 }
 
-.item:nth-child(2) {
-  text-align: right;
+.item:nth-child(2n) {
+  align-items: flex-end;
+}
+
+.item-label {
+  display: flex;
+  column-gap: 6px;
 }
 
 @media (min-width: 600px) {
   :host {
-    --spacing: 20%;
+    --spacing: calc(32px + 16px + 8px);
+    font-size: 14px;
   }
 }
 

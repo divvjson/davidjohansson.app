@@ -1,42 +1,11 @@
 @for (item of items; track item.label) {
 <div class="item">
-  <div>
-    {{ item.label }}
+  <div class="item-label">
+    <fa-icon [icon]="item.icon" />
+    <span>{{ item.label }}</span>
   </div>
-  <div>
+  <div class="item-value">
     {{ item.value }}
   </div>
 </div>
 }
-
-
-<!-- <div class="child">
-  <div class="item">
-    <div class="item-label">
-      <div class="item-label-icon">
-        <fa-icon [icon]="faLocation" size="lg"></fa-icon>
-      </div>
-      <div class="item-label-text">
-        Location
-      </div>
-    </div>
-    <div class="item-value">
-      Malmö, SE
-    </div>
-  </div>
-</div>
-<div class="child">
-  <div class="item">
-    <div class="item-label">
-      <div class="item-label-icon">
-        <fa-icon [icon]="faGitub" size="lg"></fa-icon>
-      </div>
-      <div class="item-label-text">
-        GitHub
-      </div>
-    </div>
-    <div class="item-value">
-      divvjson
-    </div>
-  </div>
-</div> -->
