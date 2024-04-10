@@ -1,20 +1,25 @@
-@for (item of items; track item.label) {
-<div class="item-container">
-  <div class="item">
-    <fa-icon [icon]="item.icon" />
-    <span>{{ item.label }}</span>
-  </div>
-  <div class="item">
-    @if (item.type === 'text') {
-    <span>{{ item.value }}</span>
-    } @else if (item.type === 'link') {
-    <a [href]="item.href" target="_blank">
-      <span>{{ item.value }}</span>
-      <fa-icon [icon]="faUpRightFromSquare" style="margin-left: 6px;" />
-    </a>
-    } @else if (item.type === 'email' || item.type === 'tel') {
-    <a [href]="item.href">{{ item.value }}</a>
-    }
-  </div>
+<div class="header">
+  Contact & Social
 </div>
-}
+<div class="items">
+  @for (item of items; track item.label) {
+  <div class="item-container">
+    <div class="item">
+      <fa-icon [icon]="item.icon" />
+      <span>{{ item.label }}</span>
+    </div>
+    <div class="item">
+      @if (item.type === 'text') {
+      <span>{{ item.value }}</span>
+      } @else if (item.type === 'link') {
+      <a [href]="item.href" target="_blank">
+        <span>{{ item.value }}</span>
+        <fa-icon [icon]="faUpRightFromSquare" style="margin-left: 6px;" />
+      </a>
+      } @else if (item.type === 'email' || item.type === 'tel') {
+      <a [href]="item.href">{{ item.value }}</a>
+      }
+    </div>
+  </div>
+  }
+</div>

@@ -69,7 +69,7 @@
 }
 
 .title {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 @media (min-width: 600px) {
@@ -79,11 +79,7 @@
 
   .card {
     border-radius: 8px;
-    max-width: 600px;
-  }
-
-  .title {
-    font-size: 14px;
+    max-width: 500px;
   }
 }
 
