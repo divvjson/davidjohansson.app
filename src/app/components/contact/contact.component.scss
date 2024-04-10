@@ -11,23 +11,23 @@
   font-size: 12px;
 }
 
-.item {
+.item-container {
   flex: 0 0 calc(50% - var(--spacing) / 2);
   display: flex;
   flex-direction: column;
 }
 
-.item:nth-child(2n) {
+.item-container:nth-child(2n) {
   align-items: flex-end;
 }
 
-.item-label {
+.item {
   display: flex;
   column-gap: 6px;
 }
 
-.item-value {
-  display: flex;
+a {
+  color: #000000DE;
 }
 
 @media (min-width: 600px) {
