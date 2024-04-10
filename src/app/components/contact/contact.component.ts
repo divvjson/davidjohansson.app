@@ -7,7 +7,7 @@ import { faGithub, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-
 type ContactItem = {
   icon: IconDefinition;
   label: string;
-  type: 'text' | 'email' | 'tel';
+  type: 'text' | 'link' | 'email' | 'tel';
   value: string;
   href?: string;
 };
@@ -34,7 +34,7 @@ export class ContactComponent {
     {
       icon: faGithub,
       label: 'GitHub',
-      type: 'text',
+      type: 'link',
       value: 'divvjson',
       href: 'https://github.com/divvjson'
     },
@@ -42,25 +42,27 @@ export class ContactComponent {
       icon: faEnvelope,
       label: 'Email',
       type: 'email',
-      value: 'me@davidjohansson.app'
+      value: 'me@davidjohansson.app',
+      href: 'mailto:me@davidjohansson.app'
     },
     {
       icon: faPhone,
       label: 'Phone',
       type: 'tel',
-      value: '+46 79 33 44 591'
+      value: '+46 79 33 44 591',
+      href: 'tel:+46793344591'
     },
     {
       icon: faInstagram,
       label: 'Instagram',
-      type: 'text',
+      type: 'link',
       value: 'divvjson',
       href: 'https://instagram.com/divvjson'
     },
     {
       icon: faXTwitter,
       label: 'X',
-      type: 'text',
+      type: 'link',
       value: 'divvjson',
       href: 'https://x.com/divvjson'
     }

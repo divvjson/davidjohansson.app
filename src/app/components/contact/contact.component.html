@@ -5,7 +5,16 @@
     <span>{{ item.label }}</span>
   </div>
   <div class="item-value">
-    {{ item.value }}
+    @if (item.type === 'text') {
+    <span>{{ item.value }}</span>
+    } @else if (item.type === 'link') {
+    <a [href]="item.href" target="_blank" style="color: #000000DE;">
+      <span>{{ item.value }}</span>
+      <fa-icon [icon]="faUpRightFromSquare" style="margin-left: 6px;" />
+    </a>
+    } @else if (item.type === 'email' || item.type === 'tel') {
+    <a [href]="item.href">{{ item.value }}</a>
+    }
   </div>
 </div>
 }
