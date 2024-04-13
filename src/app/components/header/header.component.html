@@ -1,5 +1,8 @@
 <div class="cover-container">
   <img class="cover-image" [src]="coverUrl" alt="cover image">
+  <button class="theme-toggle-button" matRipple (click)="themeService.toggle()">
+    <fa-icon [icon]="themeService.isDark ? faSun : faMoon" size="lg" />
+  </button>
 </div>
 <div class="avatar-container mat-elevation-z2" (click)="openAvatarDialog()">
   <img class="avatar-image" [src]="avatarUrl" alt="avatar image">

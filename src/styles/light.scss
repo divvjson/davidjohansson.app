@@ -2,85 +2,91 @@
 
 @include mat.core();
 
-// $gray-darker: (
-//   50: #505050,
-//   100: #505050,
-//   200: #505050,
-//   300: #505050,
-//   400: #505050,
-//   500: #505050,
-//   600: #505050,
-//   700: #505050,
-//   800: #505050,
-//   900: #505050,
-//   A100: #505050,
-//   A200: #505050,
-//   A400: #505050,
-//   A700: #505050,
-//   contrast: (
-//     50: #ffffff,
-//     100: #ffffff,
-//     200: #ffffff,
-//     300: #ffffff,
-//     400: #ffffff,
-//     500: #ffffff,
-//     600: #ffffff,
-//     700: #ffffff,
-//     800: #ffffff,
-//     900: #ffffff,
-//     A100: #ffffff,
-//     A200: #ffffff,
-//     A400: #ffffff,
-//     A700: #ffffff,
-//   )
-// );
+:root {
+  --primary: #505050;
+  --primary-contrast: #FFFFFF;
+  --accent: #F5F5F5;
+  --accent-contrast: #000000;
+}
 
-// $gray-lighter: (
-//   50: whitesmoke,
-//   100: whitesmoke,
-//   200: whitesmoke,
-//   300: whitesmoke,
-//   400: whitesmoke,
-//   500: whitesmoke,
-//   600: whitesmoke,
-//   700: whitesmoke,
-//   800: whitesmoke,
-//   900: whitesmoke,
-//   A100: whitesmoke,
-//   A200: whitesmoke,
-//   A400: whitesmoke,
-//   A700: whitesmoke,
-//   contrast: (
-//     50: #000000,
-//     100: #000000,
-//     200: #000000,
-//     300: #000000,
-//     400: #000000,
-//     500: #000000,
-//     600: #000000,
-//     700: #000000,
-//     800: #000000,
-//     900: #000000,
-//     A100: #000000,
-//     A200: #000000,
-//     A400: #000000,
-//     A700: #000000,
-//   )
-// );
+$primary-palette: (
+  50: var(--primary),
+  100: var(--primary),
+  200: var(--primary),
+  300: var(--primary),
+  400: var(--primary),
+  500: var(--primary),
+  600: var(--primary),
+  700: var(--primary),
+  800: var(--primary),
+  900: var(--primary),
+  A100: var(--primary),
+  A200: var(--primary),
+  A400: var(--primary),
+  A700: var(--primary),
+  contrast: (
+    50: var(--primary-contrast),
+    100: var(--primary-contrast),
+    200: var(--primary-contrast),
+    300: var(--primary-contrast),
+    400: var(--primary-contrast),
+    500: var(--primary-contrast),
+    600: var(--primary-contrast),
+    700: var(--primary-contrast),
+    800: var(--primary-contrast),
+    900: var(--primary-contrast),
+    A100: var(--primary-contrast),
+    A200: var(--primary-contrast),
+    A400: var(--primary-contrast),
+    A700: var(--primary-contrast),
+  )
+);
+
+$accent-palette: (
+  50: var(--accent),
+  100: var(--accent),
+  200: var(--accent),
+  300: var(--accent),
+  400: var(--accent),
+  500: var(--accent),
+  600: var(--accent),
+  700: var(--accent),
+  800: var(--accent),
+  900: var(--accent),
+  A100: var(--accent),
+  A200: var(--accent),
+  A400: var(--accent),
+  A700: var(--accent),
+  contrast: (
+    50: var(--accent-contrast),
+    100: var(--accent-contrast),
+    200: var(--accent-contrast),
+    300: var(--accent-contrast),
+    400: var(--accent-contrast),
+    500: var(--accent-contrast),
+    600: var(--accent-contrast),
+    700: var(--accent-contrast),
+    800: var(--accent-contrast),
+    900: var(--accent-contrast),
+    A100: var(--accent-contrast),
+    A200: var(--accent-contrast),
+    A400: var(--accent-contrast),
+    A700: var(--accent-contrast),
+  )
+);
 
 $app-typography: mat.define-typography-config(
   $font-family: 'Poppins, sans-serif'
 );
 
-$app-light-primary: mat.define-palette(mat.$deep-purple-palette);
-$app-light-accent: mat.define-palette(mat.$amber-palette);
+$app-light-primary: mat.define-palette($primary-palette);
+$app-light-accent: mat.define-palette($accent-palette);
 $app-light-warn: mat.define-palette(mat.$red-palette);
 $app-light-theme: mat.define-light-theme((
   color: (
     primary: $app-light-primary,
     accent: $app-light-accent,
-    warn: $app-light-warn,
-    bg-1: mat.get-color-from-palette(mat.$gray-palette, 50)
+    warn: $app-light-warn
   ),
   typography: $app-typography
 ));
