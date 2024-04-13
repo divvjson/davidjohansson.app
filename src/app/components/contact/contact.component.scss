@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.header {
+  font-weight: 600;
+}
+
+.items {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 16px;
+  font-size: 14px;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-container:nth-child(2n) {
+  align-items: flex-end;
+}
+
+.item {
+  display: flex;
+  column-gap: 6px;
+  font-weight: 500;
+}
+
+.item:first-child {
+  color: rgba(0, 0, 0, 0.67);
+}
+
+a {
+  color: #000000DE;
+}

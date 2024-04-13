@@ -9,6 +9,7 @@
 }
 
 .card {
+  background-color: #fcfcfc;
   position: relative;
   width: 100%;
   flex-grow: 1;
@@ -68,13 +69,7 @@
 }
 
 .title {
-  font-size: 13px;
-}
-
-.contact-container {
-  display: flex;
-  box-sizing: border-box;
-  padding: 16px;
+  font-size: 14px;
 }
 
 @media (min-width: 600px) {
@@ -84,7 +79,7 @@
 
   .card {
     border-radius: 8px;
-    max-width: 600px;
+    max-width: 500px;
   }
 }
 
