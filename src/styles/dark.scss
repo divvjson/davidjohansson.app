@@ -2,78 +2,78 @@
 
 @include mat.core();
 
-$primary-palette: (
-  50: var(--primary),
-  100: var(--primary),
-  200: var(--primary),
-  300: var(--primary),
-  400: var(--primary),
-  500: var(--primary),
-  600: var(--primary),
-  700: var(--primary),
-  800: var(--primary),
-  900: var(--primary),
-  A100: var(--primary),
-  A200: var(--primary),
-  A400: var(--primary),
-  A700: var(--primary),
-  contrast: (
-    50: var(--primary-contrast),
-    100: var(--primary-contrast),
-    200: var(--primary-contrast),
-    300: var(--primary-contrast),
-    400: var(--primary-contrast),
-    500: var(--primary-contrast),
-    600: var(--primary-contrast),
-    700: var(--primary-contrast),
-    800: var(--primary-contrast),
-    900: var(--primary-contrast),
-    A100: var(--primary-contrast),
-    A200: var(--primary-contrast),
-    A400: var(--primary-contrast),
-    A700: var(--primary-contrast),
-  )
-);
+// $primary-palette: (
+//   50: var(--primary),
+//   100: var(--primary),
+//   200: var(--primary),
+//   300: var(--primary),
+//   400: var(--primary),
+//   500: var(--primary),
+//   600: var(--primary),
+//   700: var(--primary),
+//   800: var(--primary),
+//   900: var(--primary),
+//   A100: var(--primary),
+//   A200: var(--primary),
+//   A400: var(--primary),
+//   A700: var(--primary),
+//   contrast: (
+//     50: var(--primary-contrast),
+//     100: var(--primary-contrast),
+//     200: var(--primary-contrast),
+//     300: var(--primary-contrast),
+//     400: var(--primary-contrast),
+//     500: var(--primary-contrast),
+//     600: var(--primary-contrast),
+//     700: var(--primary-contrast),
+//     800: var(--primary-contrast),
+//     900: var(--primary-contrast),
+//     A100: var(--primary-contrast),
+//     A200: var(--primary-contrast),
+//     A400: var(--primary-contrast),
+//     A700: var(--primary-contrast),
+//   )
+// );
 
-$accent-palette: (
-  50: var(--accent),
-  100: var(--accent),
-  200: var(--accent),
-  300: var(--accent),
-  400: var(--accent),
-  500: var(--accent),
-  600: var(--accent),
-  700: var(--accent),
-  800: var(--accent),
-  900: var(--accent),
-  A100: var(--accent),
-  A200: var(--accent),
-  A400: var(--accent),
-  A700: var(--accent),
-  contrast: (
-    50: var(--accent-contrast),
-    100: var(--accent-contrast),
-    200: var(--accent-contrast),
-    300: var(--accent-contrast),
-    400: var(--accent-contrast),
-    500: var(--accent-contrast),
-    600: var(--accent-contrast),
-    700: var(--accent-contrast),
-    800: var(--accent-contrast),
-    900: var(--accent-contrast),
-    A100: var(--accent-contrast),
-    A200: var(--accent-contrast),
-    A400: var(--accent-contrast),
-    A700: var(--accent-contrast),
-  )
-);
+// $accent-palette: (
+//   50: var(--accent),
+//   100: var(--accent),
+//   200: var(--accent),
+//   300: var(--accent),
+//   400: var(--accent),
+//   500: var(--accent),
+//   600: var(--accent),
+//   700: var(--accent),
+//   800: var(--accent),
+//   900: var(--accent),
+//   A100: var(--accent),
+//   A200: var(--accent),
+//   A400: var(--accent),
+//   A700: var(--accent),
+//   contrast: (
+//     50: var(--accent-contrast),
+//     100: var(--accent-contrast),
+//     200: var(--accent-contrast),
+//     300: var(--accent-contrast),
+//     400: var(--accent-contrast),
+//     500: var(--accent-contrast),
+//     600: var(--accent-contrast),
+//     700: var(--accent-contrast),
+//     800: var(--accent-contrast),
+//     900: var(--accent-contrast),
+//     A100: var(--accent-contrast),
+//     A200: var(--accent-contrast),
+//     A400: var(--accent-contrast),
+//     A700: var(--accent-contrast),
+//   )
+// );
 
 $app-typography: mat.define-typography-config(
   $font-family: 'Poppins, sans-serif'
 );
 
-$app-dark-primary: mat.define-palette($primary-palette);
-$app-dark-accent: mat.define-palette($accent-palette);
+$app-dark-primary: mat.define-palette(mat.$indigo-palette);
+$app-dark-accent: mat.define-palette(mat.$pink-palette);
 $app-dark-warn: mat.define-palette(mat.$red-palette);
 $app-dark-theme: mat.define-dark-theme((
   color: (
