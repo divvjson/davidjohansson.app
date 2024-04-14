@@ -9,7 +9,7 @@
 }
 
 .items {
-  margin-top: 16px;
+  margin-top: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 16px;
@@ -36,9 +36,9 @@
 }
 
 .item:last-child {
-  color: var(--gray-900);
+  color: var(--black);
 }
 
 a {
-  color: var(--gray-900);
+  color: var(--black);
 }
