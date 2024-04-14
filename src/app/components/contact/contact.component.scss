@@ -32,9 +32,13 @@
 }
 
 .item:first-child {
-  color: rgba(0, 0, 0, 0.67);
+  color: var(--gray-700);
+}
+
+.item:last-child {
+  color: var(--gray-900);
 }
 
 a {
-  color: #000000DE;
+  color: var(--gray-900);
 }
