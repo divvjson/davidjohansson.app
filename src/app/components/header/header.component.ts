@@ -22,7 +22,9 @@ export class HeaderComponent {
   public themeService = inject(ThemeService);
   public faSun = faSun;
   public faMoon = faMoon;
-  public coverUrl = 'assets/images/cover.jpg';
+  //public coverUrl = 'assets/images/cover.jpg';
+  public dayUrl = 'assets/images/day.webp';
+  public nightUrl = 'assets/images/night.webp';
   public avatarUrl = 'assets/images/me.jpg';
 
   public openAvatarDialog() {
