@@ -4,6 +4,7 @@
   box-sizing: border-box;
   border: 1px solid var(--gray-300);
   border-radius: 4px;
+  background-color: var(--white);
 }
 
 .header {
@@ -12,6 +13,7 @@
   box-sizing: border-box;
   padding: 12px;
   row-gap: 2px;
+  border-bottom: 1px solid var(--gray-300);
 }
 
 .title {
@@ -35,4 +37,5 @@
   justify-content: space-between;
   box-sizing: border-box;
   padding: 12px;
+  border-top: 1px solid var(--gray-300);
 }
