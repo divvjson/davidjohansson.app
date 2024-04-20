@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { WorkComponent } from '../work/work.component';
 
-type AppGroup = {
+type WorkGroup = {
   year: number;
-  apps: App[];
+  works: Work[];
 };
 
-type App = {
+export type Work = {
   title: string;
   description: string;
   imageUrl: string;
@@ -16,15 +17,17 @@ type App = {
 @Component({
   selector: 'app-showcase',
   standalone: true,
-  imports: [],
+  imports: [
+    WorkComponent
+  ],
   templateUrl: './showcase.component.html',
   styleUrl: './showcase.component.scss'
 })
 export class ShowcaseComponent {
-  public appGroups: AppGroup[] = [
+  public workGroups: WorkGroup[] = [
     {
       year: 2024,
-      apps: [
+      works: [
         {
           title: 'Räkna på inflation',
           description: 'Inflationskalkylator - Jämför penningvärde över tid justerat för inflation.',
@@ -36,7 +39,7 @@ export class ShowcaseComponent {
     },
     {
       year: 2023,
-      apps: [
+      works: [
         {
           title: 'Music Player',
           description: 'Listen to tracks and rank them using a drag-and-drop-able list.',

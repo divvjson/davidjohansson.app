@@ -1,4 +1,6 @@
 :host {
+  --anchor-width: 1px;
+  --anchor-color: var(--gray-300);
   display: flex;
   flex-direction: column;
   padding: 16px;
@@ -6,4 +8,36 @@
 
 .header {
   font-weight: 600;
+}
+
+.year-container {
+  height: 27px;
+  display: grid;
+  grid-template-columns: var(--anchor-width) 1fr var(--anchor-width);
+}
+
+.anchor-horizontal {
+  background-color: var(--anchor-color);
+  position: relative;
+}
+
+.anchor-vertical {
+  position: absolute;
+  width: calc(var(--anchor-width) + 31px);
+  height: 1px;
+  background-color: var(--anchor-color);
+  top: 50%;
+}
+
+.year {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-container {
+  height: calc(128px + 1px);
+  display: grid;
+  grid-template-columns: var(--anchor-width) 31px 1fr;
 }
