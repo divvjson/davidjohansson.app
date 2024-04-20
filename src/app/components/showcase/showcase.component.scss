@@ -1,7 +1,4 @@
 :host {
-  --anchor-width: 1px;
-  --anchor-color: var(--gray-300);
-  --empty-container-width: 31px;
   display: flex;
   flex-direction: column;
   padding: 16px;
@@ -12,39 +9,20 @@
 }
 
 .year-container {
-  height: 27px;
-  display: grid;
-  grid-template-columns: var(--anchor-width) 1fr var(--anchor-width);
-}
-
-.anchor-horizontal {
-  width: var(--anchor-width);
-  height: 100%;
-  background-color: var(--anchor-color);
-  position: relative;
-}
-
-.anchor-vertical {
-  position: absolute;
-  width: calc(var(--anchor-width) + var(--empty-container-width));
-  height: 1px;
-  background-color: var(--anchor-color);
-  top: 50%;
+  display: flex;
 }
 
 .year {
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.work-container {
-  height: calc(256px + 1px);
-  display: grid;
-  grid-template-columns: var(--anchor-width) var(--empty-container-width) 1fr;
-}
-
-.space-container {
-  height: 27px;
+  background-color: darkred;
+  font-size: 12px;
+  font-weight: 600;
+  width: 40px;
+  box-sizing: border-box;
+  padding: 4px;
+  border-radius: 4px;
+  color: var(--white);
+  margin-top: 12px;
 }

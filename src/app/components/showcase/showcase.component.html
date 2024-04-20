@@ -1,36 +1,11 @@
 <div class="header">
   Showcase
 </div>
-@for (workGroup of workGroups; track workGroup.year; let lastWorkGroup = $last) {
+@for (workGroup of workGroups; track workGroup) {
 <div class="year-container">
-  <div class="anchor-horizontal">
-
-  </div>
-  <div class="year">
-    {{ workGroup.year }}
-  </div>
-  <div>
-
-  </div>
+  <div class="year">{{ workGroup.year }}</div>
 </div>
-@for (work of workGroup.works; track work; let lastWork = $last) {
-<div class="work-container">
-  <div class="anchor-horizontal" [style.height]="lastWorkGroup && lastWork ? '50%': null">
-    <div class="anchor-vertical" [style.top]="lastWorkGroup && lastWork ? '100%': null">
-
-    </div>
-  </div>
-  <div>
-
-  </div>
+@for (work of workGroup.works; track work) {
   <app-work [work]="work" />
-</div>
-@if (lastWorkGroup === false || lastWork === false) {
-<div class="space-container">
-  <div class="anchor-horizontal">
-
-  </div>
-</div>
-}
 }
 }
