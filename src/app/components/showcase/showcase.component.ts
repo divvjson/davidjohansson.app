@@ -30,7 +30,7 @@ export class ShowcaseComponent {
       works: [
         {
           title: 'Räkna på inflation',
-          description: 'Inflationskalkylator - Jämför penningvärde över tid justerat för inflation.',
+          description: 'Penningvärde över tid justerat för inflation.',
           imageUrl: 'assets/images/showcase/rakna-pa-inflation.png',
           repositoryUrl: 'https://github.com/divvjson/adjust-for-inflation',
           applicationUrl: 'https://rakna-pa-inflation.davidjohansson.app'
@@ -42,7 +42,7 @@ export class ShowcaseComponent {
       works: [
         {
           title: 'Music Player',
-          description: 'Listen to tracks and rank them using a drag-and-drop-able list.',
+          description: 'Listen to music.',
           imageUrl: 'assets/images/showcase/music-player.png',
           repositoryUrl: 'https://github.com/divvjson/music-player',
           applicationUrl: 'https://musicplayer.davidjohansson.app'

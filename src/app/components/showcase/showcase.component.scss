@@ -10,6 +10,7 @@
 
 .year-container {
   display: flex;
+  margin-top: 12px;
 }
 
 .year {
@@ -24,5 +25,8 @@
   padding: 4px;
   border-radius: 4px;
   color: var(--white);
+}
+
+app-work {
   margin-top: 12px;
 }
