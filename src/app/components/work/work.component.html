@@ -4,6 +4,12 @@
 </div>
 <img class="image" [src]="work().imageUrl" alt="work image">
 <div class="actions">
-  <a mat-flat-button color="accent">Source</a>
-  <a mat-flat-button color="primary">Open</a>
+  <a mat-flat-button color="accent" [href]="work().repositoryUrl" target="_blank">
+    <fa-icon [icon]="faGithub" size="lg" />
+    <span>Source</span>
+  </a>
+  <a mat-flat-button color="primary" [href]="work().applicationUrl" target="_blank">
+    <fa-icon [icon]="faUpRightFromSquare" />
+    <span>Open</span>
+  </a>
 </div>
