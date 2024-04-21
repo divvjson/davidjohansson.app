@@ -35,45 +35,45 @@ $primary-palette: (
   )
 );
 
-// $accent-palette: (
-//   50: var(--accent),
-//   100: var(--accent),
-//   200: var(--accent),
-//   300: var(--accent),
-//   400: var(--accent),
-//   500: var(--accent),
-//   600: var(--accent),
-//   700: var(--accent),
-//   800: var(--accent),
-//   900: var(--accent),
-//   A100: var(--accent),
-//   A200: var(--accent),
-//   A400: var(--accent),
-//   A700: var(--accent),
-//   contrast: (
-//     50: var(--accent-contrast),
-//     100: var(--accent-contrast),
-//     200: var(--accent-contrast),
-//     300: var(--accent-contrast),
-//     400: var(--accent-contrast),
-//     500: var(--accent-contrast),
-//     600: var(--accent-contrast),
-//     700: var(--accent-contrast),
-//     800: var(--accent-contrast),
-//     900: var(--accent-contrast),
-//     A100: var(--accent-contrast),
-//     A200: var(--accent-contrast),
-//     A400: var(--accent-contrast),
-//     A700: var(--accent-contrast),
-//   )
-// );
+$accent-palette: (
+  50: var(--accent-50),
+  100: var(--accent-100),
+  200: var(--accent-200),
+  300: var(--accent-300),
+  400: var(--accent-400),
+  500: var(--accent-500),
+  600: var(--accent-600),
+  700: var(--accent-700),
+  800: var(--accent-800),
+  900: var(--accent-900),
+  A100: var(--accent-A100),
+  A200: var(--accent-A200),
+  A400: var(--accent-A400),
+  A700: var(--accent-A700),
+  contrast: (
+    50: var(--accent-50-contrast),
+    100: var(--accent-100-contrast),
+    200: var(--accent-200-contrast),
+    300: var(--accent-300-contrast),
+    400: var(--accent-400-contrast),
+    500: var(--accent-500-contrast),
+    600: var(--accent-600-contrast),
+    700: var(--accent-700-contrast),
+    800: var(--accent-800-contrast),
+    900: var(--accent-900-contrast),
+    A100: var(--accent-A100-contrast),
+    A200: var(--accent-A200-contrast),
+    A400: var(--accent-A400-contrast),
+    A700: var(--accent-A700-contrast),
+  )
+);
 
 $app-typography: mat.define-typography-config(
   $font-family: 'Poppins, sans-serif'
 );
 
 $app-light-primary: mat.define-palette($primary-palette);
-$app-light-accent: mat.define-palette(mat.$green-palette);
+$app-light-accent: mat.define-palette($accent-palette);
 $app-light-warn: mat.define-palette(mat.$red-palette);
 $app-light-theme: mat.define-light-theme((
   color: (

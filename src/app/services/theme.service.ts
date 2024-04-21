@@ -67,6 +67,34 @@ export class ThemeService {
     this.setCSSVariable('--primary-A700', '#052122');
     this.setCSSVariable('--primary-A700-contrast', 'white');
     // Accent
+    this.setCSSVariable('--accent-50', '#FFFFFF');
+    this.setCSSVariable('--accent-50-contrast', 'black');
+    this.setCSSVariable('--accent-100', '#FFFFFF');
+    this.setCSSVariable('--accent-100-contrast', 'black');
+    this.setCSSVariable('--accent-200', '#FFFFFF');
+    this.setCSSVariable('--accent-200-contrast', 'black');
+    this.setCSSVariable('--accent-300', '#F9EDE5');
+    this.setCSSVariable('--accent-300-contrast', 'black');
+    this.setCSSVariable('--accent-400', '#F8DFCC');
+    this.setCSSVariable('--accent-400-contrast', 'black');
+    this.setCSSVariable('--accent-500', '#F8D7B7');
+    this.setCSSVariable('--accent-500-contrast', 'black');
+    this.setCSSVariable('--accent-600', '#F1CCAE');
+    this.setCSSVariable('--accent-600-contrast', 'black');
+    this.setCSSVariable('--accent-700', '#E6BEA1');
+    this.setCSSVariable('--accent-700-contrast', 'black');
+    this.setCSSVariable('--accent-800', '#E3B491');
+    this.setCSSVariable('--accent-800-contrast', 'black');
+    this.setCSSVariable('--accent-900', '#E3A475');
+    this.setCSSVariable('--accent-900-contrast', 'black');
+    this.setCSSVariable('--accent-A100', '#FFFFFF');
+    this.setCSSVariable('--accent-A100-contrast', 'black');
+    this.setCSSVariable('--accent-A200', '#FEE8D9');
+    this.setCSSVariable('--accent-A200-contrast', 'black');
+    this.setCSSVariable('--accent-A400', '#FBB5A0');
+    this.setCSSVariable('--accent-A400-contrast', 'black');
+    this.setCSSVariable('--accent-A700', '#F9A261');
+    this.setCSSVariable('--accent-A700-contrast', 'black');
 
     this.isDark = false;
   }
