@@ -31,7 +31,7 @@ export class ShowcaseComponent {
         {
           title: 'Räkna på inflation',
           description: 'Penningvärde över tid justerat för inflation.',
-          imageUrl: 'assets/images/showcase/rakna-pa-inflation.png',
+          imageUrl: 'assets/images/showcase/rakna-pa-inflation_original.png',
           repositoryUrl: 'https://github.com/divvjson/adjust-for-inflation',
           applicationUrl: 'https://rakna-pa-inflation.davidjohansson.app'
         }
@@ -43,21 +43,21 @@ export class ShowcaseComponent {
         {
           title: 'Music Player',
           description: 'Listen to music.',
-          imageUrl: 'assets/images/showcase/music-player.png',
+          imageUrl: 'assets/images/showcase/music-player_75.png',
           repositoryUrl: 'https://github.com/divvjson/music-player',
           applicationUrl: 'https://musicplayer.davidjohansson.app'
         },
         {
           title: 'Resurskarta',
           description: 'Fordon på en karta som uppdateras i realtid.',
-          imageUrl: 'assets/images/showcase/resurskarta.png',
+          imageUrl: 'assets/images/showcase/resurskarta_50.png',
           repositoryUrl: 'https://github.com/divvjson/resurskarta',
           applicationUrl: 'https://resurskarta.davidjohansson.app'
         },
         {
           title: 'Color Palette Generator',
           description: 'Simple tool for creating color palettes.',
-          imageUrl: 'assets/images/showcase/color-palette-generator.png',
+          imageUrl: 'assets/images/showcase/color-palette-generator_original.png',
           repositoryUrl: 'https://github.com/divvjson/material-color-palette-generator',
           applicationUrl: 'https://mcpg.davidjohansson.app'
         }
