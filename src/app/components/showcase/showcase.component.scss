@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.header {
+  font-weight: 600;
+}
+
+.year-container {
+  display: flex;
+  margin-top: 12px;
+}
+
+.year {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkred;
+  font-size: 12px;
+  font-weight: 600;
+  width: 40px;
+  box-sizing: border-box;
+  padding: 4px;
+  border-radius: 4px;
+  color: var(--white);
+}
+
+app-work {
+  margin-top: 12px;
+}

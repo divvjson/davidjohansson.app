@@ -4,6 +4,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { ContactComponent } from './components/contact/contact.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ShowcaseComponent } from './components/showcase/showcase.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     AboutMeComponent,
     ContactComponent,
     HeaderComponent,
-    MatDividerModule
+    MatDividerModule,
+    ShowcaseComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

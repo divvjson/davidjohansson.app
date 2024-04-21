@@ -1,0 +1,11 @@
+<div class="header">
+  Showcase
+</div>
+@for (workGroup of workGroups; track workGroup) {
+<div class="year-container">
+  <div class="year">{{ workGroup.year }}</div>
+</div>
+@for (work of workGroup.works; track work) {
+  <app-work [work]="work" />
+}
+}
