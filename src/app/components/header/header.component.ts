@@ -27,7 +27,7 @@ export class HeaderComponent {
   public dayUrl = 'assets/images/day_50.webp';
   public nightUrl = 'assets/images/night_50.webp';
   public smallAvatarUrl = 'assets/images/me_10.jpg';
-  public largeAvatarUrl = 'assets/images/me_50.jpg';
+  public largeAvatarUrl = 'assets/images/me_30.jpg';
 
   public openAvatarDialog() {
     this.dialog.open(AvatarDialogComponent, {
