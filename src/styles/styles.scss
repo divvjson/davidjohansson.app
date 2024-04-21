@@ -19,3 +19,23 @@ body {
 .mdc-button__label {
   letter-spacing: normal;
 }
+
+/* Scrollbar styles for Chromium-based browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
