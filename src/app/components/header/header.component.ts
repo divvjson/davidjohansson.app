@@ -25,7 +25,7 @@ export class HeaderComponent {
   public faSun = faSun;
   public faMoon = faMoon;
   public dayUrl = 'assets/images/day_50.webp';
-  public nightUrl = 'assets/images/night_50.webp';
+  public nightUrl = 'assets/images/night2_50.webp';
   public smallAvatarUrl = 'assets/images/me_10.jpg';
   public largeAvatarUrl = 'assets/images/me_30.jpg';
 
