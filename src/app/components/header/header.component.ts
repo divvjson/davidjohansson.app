@@ -5,6 +5,7 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatRippleModule } from '@angular/material/core';
 import { ThemeService } from '../../services/theme.service';
+import { NgOptimizedImage } from '@angular/common'
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,8 @@ import { ThemeService } from '../../services/theme.service';
   imports: [
     FontAwesomeModule,
     MatDialogModule,
-    MatRippleModule
+    MatRippleModule,
+    NgOptimizedImage
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
@@ -22,15 +24,15 @@ export class HeaderComponent {
   public themeService = inject(ThemeService);
   public faSun = faSun;
   public faMoon = faMoon;
-  //public coverUrl = 'assets/images/cover.jpg';
-  public dayUrl = 'assets/images/day.webp';
-  public nightUrl = 'assets/images/night.webp';
-  public avatarUrl = 'assets/images/me.jpg';
+  public dayUrl = 'assets/images/day_50.webp';
+  public nightUrl = 'assets/images/night_50.webp';
+  public smallAvatarUrl = 'assets/images/me_10.jpg';
+  public largeAvatarUrl = 'assets/images/me_50.jpg';
 
   public openAvatarDialog() {
     this.dialog.open(AvatarDialogComponent, {
       data: {
-        avatarUrl: this.avatarUrl
+        avatarUrl: this.largeAvatarUrl
       }
     });
   }

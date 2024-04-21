@@ -1,11 +1,11 @@
 <div class="cover-container">
-  <img class="cover-image" [src]="themeService.isDark ? nightUrl : dayUrl" alt="cover image">
+  <img class="cover-image" [ngSrc]="themeService.isDark ? nightUrl : dayUrl" fill priority alt="cover image">
   <button class="theme-toggle-button" matRipple (click)="themeService.toggle()">
     <fa-icon [icon]="themeService.isDark ? faSun : faMoon" size="lg" />
   </button>
 </div>
 <div class="avatar-container mat-elevation-z2" (click)="openAvatarDialog()">
-  <img class="avatar-image" [src]="avatarUrl" alt="avatar image">
+  <img class="avatar-image" [ngSrc]="smallAvatarUrl" fill priority alt="avatar image">
 </div>
 <div class="presentation-container">
   <div class="empty-container">
