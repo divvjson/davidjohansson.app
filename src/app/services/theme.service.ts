@@ -24,6 +24,7 @@ export class ThemeService {
 
   private setLightTheme() {
     document.body.classList.remove('dark-theme');
+    // Gray scales
     this.setCSSVariable('--white', '#FFFFFF');
     this.setCSSVariable('--gray-50', '#FAFAFA');
     this.setCSSVariable('--gray-100', '#F5F5F5');
@@ -36,6 +37,37 @@ export class ThemeService {
     this.setCSSVariable('--gray-800', '#424242');
     this.setCSSVariable('--gray-900', '#212121');
     this.setCSSVariable('--black', '#000000');
+    // Primary
+    this.setCSSVariable('--primary-50', '#53E8D5');
+    this.setCSSVariable('--primary-50-contrast', 'black');
+    this.setCSSVariable('--primary-100', '#39E4D8');
+    this.setCSSVariable('--primary-100-contrast', 'black');
+    this.setCSSVariable('--primary-200', '#38A0A2');
+    this.setCSSVariable('--primary-200-contrast', 'black');
+    this.setCSSVariable('--primary-300', '#2F797B');
+    this.setCSSVariable('--primary-300-contrast', 'white');
+    this.setCSSVariable('--primary-400', '#1D6F73');
+    this.setCSSVariable('--primary-400-contrast', 'white');
+    this.setCSSVariable('--primary-500', '#155F66');
+    this.setCSSVariable('--primary-500-contrast', 'white');
+    this.setCSSVariable('--primary-600', '#195052');
+    this.setCSSVariable('--primary-600-contrast', 'white');
+    this.setCSSVariable('--primary-700', '#183A3B');
+    this.setCSSVariable('--primary-700-contrast', 'white');
+    this.setCSSVariable('--primary-800', '#122D2D');
+    this.setCSSVariable('--primary-800-contrast', 'white');
+    this.setCSSVariable('--primary-900', '#091B1B');
+    this.setCSSVariable('--primary-900-contrast', 'white');
+    this.setCSSVariable('--primary-A100', '#19A8B7');
+    this.setCSSVariable('--primary-A100-contrast', 'white');
+    this.setCSSVariable('--primary-A200', '#138D8F');
+    this.setCSSVariable('--primary-A200-contrast', 'white');
+    this.setCSSVariable('--primary-A400', '#0C5B4D');
+    this.setCSSVariable('--primary-A400-contrast', 'white');
+    this.setCSSVariable('--primary-A700', '#052122');
+    this.setCSSVariable('--primary-A700-contrast', 'white');
+    // Accent
+
     this.isDark = false;
   }
 
