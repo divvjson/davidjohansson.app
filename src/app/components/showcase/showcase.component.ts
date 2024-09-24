@@ -29,6 +29,13 @@ export class ShowcaseComponent {
       year: 2024,
       works: [
         {
+          title: 'Sales Dashboard',
+          description: 'Interactive statistics, filter data for tailored insights.',
+          imageUrl: 'assets/images/showcase/salesdashboard_original.png',
+          repositoryUrl: 'https://github.com/divvjson/SalesDashboard',
+          applicationUrl: 'https://salesdashboard.davidjohansson.app'
+        },
+        {
           title: 'Räkna på inflation',
           description: 'Penningvärde över tid justerat för inflation.',
           imageUrl: 'assets/images/showcase/rakna-pa-inflation_original.png',
