@@ -26,7 +26,7 @@ export class ThemeService {
     document.body.classList.remove('dark-theme');
     // Gray scales
     this.setCSSVariable('--white', '#FFFFFF');
-    this.setCSSVariable('--gray-50', '#FAFAFA');
+    this.setCSSVariable('--gray-50', '#FBFBFB');
     this.setCSSVariable('--gray-100', '#F5F5F5');
     this.setCSSVariable('--gray-200', '#EEEEEE');
     this.setCSSVariable('--gray-300', '#E0E0E0');
