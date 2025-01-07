@@ -1,6 +1,6 @@
 <div class="cover-container">
   <img class="cover-image" [ngSrc]="themeService.isDark ? nightUrl : dayUrl" fill priority alt="cover image">
-  <button class="header-button menu-header-button" matRipple>
+  <button class="header-button menu-header-button" [class.menu-header-button--scrolled]="hasScrolledPastCover" matRipple>
     <fa-icon [icon]="faBurger" size="lg" />
   </button>
   <button class="header-button theme-header-button" matRipple (click)="themeService.toggle()">

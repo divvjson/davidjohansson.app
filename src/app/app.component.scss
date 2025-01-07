@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-.card {
+#scroll-container {
   background-color: var(--gray-50);
   position: relative;
   width: 100%;
@@ -24,7 +24,7 @@
     padding: 32px;
   }
 
-  .card {
+  #scroll-container {
     border-radius: 8px;
     max-width: 500px;
   }
