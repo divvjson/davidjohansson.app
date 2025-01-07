@@ -15,18 +15,14 @@ export class ThemeService {
   }
 
   public toggle() {
-    if (this.isDark) {
-      this.setLightTheme();
-    } else {
-      this.setDarkTheme();
-    }
+    this.isDark ? this.setLightTheme() : this.setDarkTheme();
   }
 
   private setLightTheme() {
     document.body.classList.remove('dark-theme');
     // Gray scales
     this.setCSSVariable('--white', '#FFFFFF');
-    this.setCSSVariable('--gray-50', '#FAFAFA');
+    this.setCSSVariable('--gray-50', '#FBFBFB');
     this.setCSSVariable('--gray-100', '#F5F5F5');
     this.setCSSVariable('--gray-200', '#EEEEEE');
     this.setCSSVariable('--gray-300', '#E0E0E0');
@@ -38,33 +34,33 @@ export class ThemeService {
     this.setCSSVariable('--gray-900', '#212121');
     this.setCSSVariable('--black', '#000000');
     // Primary
-    this.setCSSVariable('--primary-50', '#53E8D5');
+    this.setCSSVariable('--primary-50', '#4CC7B0');
     this.setCSSVariable('--primary-50-contrast', 'black');
-    this.setCSSVariable('--primary-100', '#39E4D8');
+    this.setCSSVariable('--primary-100', '#3ABBAA');
     this.setCSSVariable('--primary-100-contrast', 'black');
-    this.setCSSVariable('--primary-200', '#38A0A2');
-    this.setCSSVariable('--primary-200-contrast', 'black');
-    this.setCSSVariable('--primary-300', '#2F797B');
+    this.setCSSVariable('--primary-200', '#43706E');
+    this.setCSSVariable('--primary-200-contrast', 'white');
+    this.setCSSVariable('--primary-300', '#334E4D');
     this.setCSSVariable('--primary-300-contrast', 'white');
-    this.setCSSVariable('--primary-400', '#1D6F73');
+    this.setCSSVariable('--primary-400', '#214646');
     this.setCSSVariable('--primary-400-contrast', 'white');
-    this.setCSSVariable('--primary-500', '#155F66');
+    this.setCSSVariable('--primary-500', '#183A3B');
     this.setCSSVariable('--primary-500-contrast', 'white');
-    this.setCSSVariable('--primary-600', '#195052');
+    this.setCSSVariable('--primary-600', '#182C2B');
     this.setCSSVariable('--primary-600-contrast', 'white');
-    this.setCSSVariable('--primary-700', '#183A3B');
+    this.setCSSVariable('--primary-700', '#121919');
     this.setCSSVariable('--primary-700-contrast', 'white');
-    this.setCSSVariable('--primary-800', '#122D2D');
+    this.setCSSVariable('--primary-800', '#090E0E');
     this.setCSSVariable('--primary-800-contrast', 'white');
-    this.setCSSVariable('--primary-900', '#091B1B');
+    this.setCSSVariable('--primary-900', '#000000');
     this.setCSSVariable('--primary-900-contrast', 'white');
-    this.setCSSVariable('--primary-A100', '#19A8B7');
+    this.setCSSVariable('--primary-A100', '#287D80');
     this.setCSSVariable('--primary-A100-contrast', 'white');
-    this.setCSSVariable('--primary-A200', '#138D8F');
+    this.setCSSVariable('--primary-A200', '#1D5D5B');
     this.setCSSVariable('--primary-A200-contrast', 'white');
-    this.setCSSVariable('--primary-A400', '#0C5B4D');
+    this.setCSSVariable('--primary-A400', '#0F3029');
     this.setCSSVariable('--primary-A400-contrast', 'white');
-    this.setCSSVariable('--primary-A700', '#052122');
+    this.setCSSVariable('--primary-A700', '#000000');
     this.setCSSVariable('--primary-A700-contrast', 'white');
     // Accent
     this.setCSSVariable('--accent-50', '#FFFFFF');
@@ -115,34 +111,34 @@ export class ThemeService {
     this.setCSSVariable('--gray-900', '#FAFAFA');
     this.setCSSVariable('--black', '#FFFFFF');
     // Primary
-    this.setCSSVariable('--primary-50', '#83E4E9');
+    this.setCSSVariable('--primary-50', '#FFF8E1');
     this.setCSSVariable('--primary-50-contrast', 'black');
-    this.setCSSVariable('--primary-100', '#6AD7E4');
+    this.setCSSVariable('--primary-100', '#FFECB3');
     this.setCSSVariable('--primary-100-contrast', 'black');
-    this.setCSSVariable('--primary-200', '#52A4B9');
+    this.setCSSVariable('--primary-200', '#FFE082');
     this.setCSSVariable('--primary-200-contrast', 'black');
-    this.setCSSVariable('--primary-300', '#438797');
-    this.setCSSVariable('--primary-300-contrast', 'white');
-    this.setCSSVariable('--primary-400', '#2E7D93');
-    this.setCSSVariable('--primary-400-contrast', 'white');
-    this.setCSSVariable('--primary-500', '#236E89');
-    this.setCSSVariable('--primary-500-contrast', 'white');
-    this.setCSSVariable('--primary-600', '#296373');
-    this.setCSSVariable('--primary-600-contrast', 'white');
-    this.setCSSVariable('--primary-700', '#2B5059');
-    this.setCSSVariable('--primary-700-contrast', 'white');
-    this.setCSSVariable('--primary-800', '#24444C');
-    this.setCSSVariable('--primary-800-contrast', 'white');
-    this.setCSSVariable('--primary-900', '#18363D');
-    this.setCSSVariable('--primary-900-contrast', 'white');
-    this.setCSSVariable('--primary-A100', '#28A8D9');
+    this.setCSSVariable('--primary-300', '#FFD54F');
+    this.setCSSVariable('--primary-300-contrast', 'black');
+    this.setCSSVariable('--primary-400', '#FFCA28');
+    this.setCSSVariable('--primary-400-contrast', 'black');
+    this.setCSSVariable('--primary-500', '#FFC107');
+    this.setCSSVariable('--primary-500-contrast', 'black');
+    this.setCSSVariable('--primary-600', '#FFB300');
+    this.setCSSVariable('--primary-600-contrast', 'black');
+    this.setCSSVariable('--primary-700', '#FFA000');
+    this.setCSSVariable('--primary-700-contrast', 'black');
+    this.setCSSVariable('--primary-800', '#FF8F00');
+    this.setCSSVariable('--primary-800-contrast', 'black');
+    this.setCSSVariable('--primary-900', '#FF6F00');
+    this.setCSSVariable('--primary-900-contrast', 'black');
+    this.setCSSVariable('--primary-A100', '#FFE57F');
     this.setCSSVariable('--primary-A100-contrast', 'black');
-    this.setCSSVariable('--primary-A200', '#2096B3');
-    this.setCSSVariable('--primary-A200-contrast', 'white');
-    this.setCSSVariable('--primary-A400', '#178081');
-    this.setCSSVariable('--primary-A400-contrast', 'white');
-    this.setCSSVariable('--primary-A700', '#0D3E4A');
-    this.setCSSVariable('--primary-A700-contrast', 'white');
+    this.setCSSVariable('--primary-A200', '#FFD740');
+    this.setCSSVariable('--primary-A200-contrast', 'black');
+    this.setCSSVariable('--primary-A400', '#FFC400');
+    this.setCSSVariable('--primary-A400-contrast', 'black');
+    this.setCSSVariable('--primary-A700', '#FFAB00');
+    this.setCSSVariable('--primary-A700-contrast', 'black');
     // Accent
     this.setCSSVariable('--accent-50', '#30A8D1');
     this.setCSSVariable('--accent-50-contrast', 'black');

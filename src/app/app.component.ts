@@ -5,6 +5,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ShowcaseComponent } from './components/showcase/showcase.component';
+import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import { EducationComponent } from './components/education/education.component';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +14,11 @@ import { ShowcaseComponent } from './components/showcase/showcase.component';
   imports: [
     AboutMeComponent,
     ContactComponent,
+    EducationComponent,
     HeaderComponent,
     MatDividerModule,
-    ShowcaseComponent
+    ShowcaseComponent,
+    WorkExperienceComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
