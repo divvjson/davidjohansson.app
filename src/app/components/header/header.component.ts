@@ -5,14 +5,22 @@ import { faBurger, faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatRippleModule } from '@angular/material/core';
 import { ThemeService } from '../../services/theme.service';
-import { NgOptimizedImage } from '@angular/common'
+import { CommonModule, NgOptimizedImage } from '@angular/common'
+import { MatMenuModule } from '@angular/material/menu';
+
+interface MenuItem {
+  id: string;
+  title: string;
+}
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
+    CommonModule,
     FontAwesomeModule,
     MatDialogModule,
+    MatMenuModule,
     MatRippleModule,
     NgOptimizedImage
   ],
@@ -32,6 +40,32 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
   public nightUrl = 'assets/images/night2_50.webp';
   public smallAvatarUrl = 'assets/images/me_10.jpg';
   public largeAvatarUrl = 'assets/images/me_30.jpg';
+  public menuItems: MenuItem[] = [
+    {
+      id: 'header',
+      title: 'Home'
+    },
+    {
+      id: 'contact',
+      title: 'Contact'
+    },
+    {
+      id: 'about-me',
+      title: 'About Me'
+    },
+    {
+      id: 'showcase',
+      title: 'Showcase'
+    },
+    {
+      id: 'work-experience',
+      title: 'Work Experience'
+    },
+    {
+      id: 'education',
+      title: 'Education'
+    }
+  ];
 
   ngAfterViewInit(): void {
     this.scrollContainer = document.getElementById('scroll-container');
@@ -45,6 +79,15 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
       this.hasScrolledPastCover = this.scrollContainer.scrollTop > this.coverHeightPx;
     }
   };
+
+  public scrollTo(menuItem: MenuItem) {
+    const section = document.getElementById(menuItem.id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      throw new Error(`Secion with id ${menuItem.id} not found.`);
+    }
+  }
 
   public openAvatarDialog() {
     this.dialog.open(AvatarDialogComponent, {
