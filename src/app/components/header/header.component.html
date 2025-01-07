@@ -1,11 +1,13 @@
 <div [style.height.px]="coverHeightPx" class="cover-container">
   <img class="cover-image" [ngSrc]="themeService.isDark ? nightUrl : dayUrl" fill priority alt="cover image">
-  <button class="header-button menu-header-button" [class.menu-header-button--scrolled]="hasScrolledPastCover" matRipple [matMenuTriggerFor]="menu">
-    <fa-icon [icon]="faBurger" size="lg" />
-  </button>
   <button class="header-button theme-header-button" matRipple (click)="themeService.toggle()">
     <fa-icon [icon]="themeService.isDark ? faSun : faMoon" size="lg" />
   </button>
+  <div class="css-is-hard">
+    <button class="header-button menu-header-button" [class.menu-header-button--scrolled]="hasScrolledPastCover" matRipple [matMenuTriggerFor]="menu">
+      <fa-icon [icon]="faBurger" size="lg" />
+    </button>
+  </div>
 </div>
 <div class="avatar-container mat-elevation-z2" (click)="openAvatarDialog()">
   <img class="avatar-image" [ngSrc]="smallAvatarUrl" fill priority alt="avatar image">

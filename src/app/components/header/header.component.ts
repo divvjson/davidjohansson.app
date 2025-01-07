@@ -83,14 +83,7 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
   public scrollTo(menuItem: MenuItem) {
     const section = document.getElementById(menuItem.id);
     if (section) {
-      const topOffset = 42; // Offset to subtract
-      const elementPosition = section.offsetTop; // Distance from the top of the document
-      const offsetPosition = elementPosition - topOffset;
-
-      this.scrollContainer.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
+      section.scrollIntoView({ behavior: 'smooth' });
     } else {
       throw new Error(`Secion with id ${menuItem.id} not found.`);
     }
