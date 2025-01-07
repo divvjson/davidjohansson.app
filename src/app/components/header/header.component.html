@@ -1,8 +1,13 @@
-<div class="cover-container">
+<div [style.height.px]="coverHeightPx" class="cover-container">
   <img class="cover-image" [ngSrc]="themeService.isDark ? nightUrl : dayUrl" fill priority alt="cover image">
-  <button class="theme-toggle-button" matRipple (click)="themeService.toggle()">
+  <button class="header-button theme-header-button" matRipple (click)="themeService.toggle()">
     <fa-icon [icon]="themeService.isDark ? faSun : faMoon" size="lg" />
   </button>
+  <div class="css-is-hard">
+    <button class="header-button menu-header-button" [class.menu-header-button--scrolled]="hasScrolledPastCover" matRipple [matMenuTriggerFor]="menu">
+      <fa-icon [icon]="faBurger" size="lg" />
+    </button>
+  </div>
 </div>
 <div class="avatar-container mat-elevation-z2" (click)="openAvatarDialog()">
   <img class="avatar-image" [ngSrc]="smallAvatarUrl" fill priority alt="avatar image">
@@ -16,3 +21,9 @@
     <span class="title">Software Developer based in Malmö, Sweden.</span>
   </div>
 </div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item *ngFor="let menuItem of menuItems" (click)="scrollTo(menuItem)">
+    {{ menuItem.title }}
+  </button>
+</mat-menu>

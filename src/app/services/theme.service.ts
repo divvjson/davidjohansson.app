@@ -11,11 +11,22 @@ export class ThemeService {
   }
 
   constructor() {
-    this.setLightTheme();
+    let theme = localStorage.getItem('theme');
+
+    if (theme !== 'light' && theme !== 'dark') {
+      theme = this.getSystemTheme();
+    }
+
+    theme === 'light' ? this.setLightTheme() : this.setDarkTheme();
+  }
+
+  private getSystemTheme(): 'light' | 'dark' {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
   public toggle() {
     this.isDark ? this.setLightTheme() : this.setDarkTheme();
+    localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
   }
 
   private setLightTheme() {
