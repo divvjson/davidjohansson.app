@@ -29,7 +29,7 @@ interface MenuItem {
 })
 export class HeaderComponent implements AfterViewInit, OnDestroy {
   private dialog = inject(MatDialog);
-  private scrollContainer: HTMLElement | null = null;
+  private scrollContainer!: HTMLElement;
   public coverHeightPx = 128;
   public hasScrolledPastCover = false;
   public themeService = inject(ThemeService);
@@ -68,22 +68,29 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
   ];
 
   ngAfterViewInit(): void {
-    this.scrollContainer = document.getElementById('scroll-container');
-    if (this.scrollContainer) {
-      this.scrollContainer.addEventListener('scroll', this.handleScroll)
+    const scrollContainer = document.getElementById('scroll-container');
+    if (scrollContainer === null) {
+      throw new Error('Scroll Container element not found.');
     }
+    this.scrollContainer = scrollContainer;
+    this.scrollContainer.addEventListener('scroll', this.handleScroll)
   }
 
   private handleScroll = () => {
-    if (this.scrollContainer) {
-      this.hasScrolledPastCover = this.scrollContainer.scrollTop > this.coverHeightPx;
-    }
+    this.hasScrolledPastCover = this.scrollContainer.scrollTop > this.coverHeightPx;
   };
 
   public scrollTo(menuItem: MenuItem) {
     const section = document.getElementById(menuItem.id);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      const topOffset = 42; // Offset to subtract
+      const elementPosition = section.offsetTop; // Distance from the top of the document
+      const offsetPosition = elementPosition - topOffset;
+
+      this.scrollContainer.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
     } else {
       throw new Error(`Secion with id ${menuItem.id} not found.`);
     }
@@ -98,8 +105,6 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.scrollContainer) {
-      this.scrollContainer.removeEventListener('scroll', this.handleScroll);
-    }
+    this.scrollContainer.removeEventListener('scroll', this.handleScroll);
   }
 }
