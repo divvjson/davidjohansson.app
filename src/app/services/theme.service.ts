@@ -15,11 +15,7 @@ export class ThemeService {
   }
 
   public toggle() {
-    if (this.isDark) {
-      this.setLightTheme();
-    } else {
-      this.setDarkTheme();
-    }
+    this.isDark ? this.setLightTheme() : this.setDarkTheme();
   }
 
   private setLightTheme() {
