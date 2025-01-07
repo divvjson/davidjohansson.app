@@ -22,6 +22,7 @@ import { NgOptimizedImage } from '@angular/common'
 export class HeaderComponent implements AfterViewInit, OnDestroy {
   private dialog = inject(MatDialog);
   private scrollContainer: HTMLElement | null = null;
+  public coverHeightPx = 128;
   public hasScrolledPastCover = false;
   public themeService = inject(ThemeService);
   public faBurger = faBurger;
@@ -41,7 +42,7 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
 
   private handleScroll = () => {
     if (this.scrollContainer) {
-      this.hasScrolledPastCover = this.scrollContainer.scrollTop > 128;
+      this.hasScrolledPastCover = this.scrollContainer.scrollTop > this.coverHeightPx;
     }
   };
 

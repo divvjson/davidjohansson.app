@@ -1,10 +1,5 @@
-:host {
-  --header-height: 128px;
-}
-
 .cover-container {
   width: 100%;
-  height: var(--header-height);
   display: flex;
   position: relative;
 }

@@ -1,4 +1,4 @@
-<div class="cover-container">
+<div [style.height.px]="coverHeightPx" class="cover-container">
   <img class="cover-image" [ngSrc]="themeService.isDark ? nightUrl : dayUrl" fill priority alt="cover image">
   <button class="header-button menu-header-button" [class.menu-header-button--scrolled]="hasScrolledPastCover" matRipple>
     <fa-icon [icon]="faBurger" size="lg" />
